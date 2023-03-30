@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <style>
+      .col {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--A diferencia de container, la clase container-fluid utiliza todo el ancho disponible de la pantalla -->
+    <!-- Los container tambien tienen otras clases para definir el tamaño de la pantalla (sm,md,lg,xl,xxl,fluid) -->
+    <div class="container">
+      <!-- Cada row como minimo tiene 12 columnas o al menos que se modifique -->
+      <h1 style="background-color: red">Hello, world!</h1>
+      <div class="row">
+        <div class="col">Primera Columna</div>
+        <div class="col">Segunda Columna</div>
+        <div class="col">Tercera Columna</div>
+      </div>
+
+      <div class="row">
+        <div class="col">Primera Columna</div>
+        <div class="col">Segunda Columna</div>
+      </div>
+
+      <div class="row">
+        <!-- Si queremos modificar el ancho de las columnas jugaremos con las columnas que tiene bootstrap en la grilla asi: -->
+        <!-- Si la suma de los tamaños de las columnas es mayor que 12 bootstrap lo ubicará en una siguiente fila con el tamaño mas grande -->
+        <!-- Si no se especifica el valor en una de las columnas se tomará el valor restante -->
+        <!-- Se puede indicar dos tamaños, col-n para tamaños pequeños, col-lg-n para pantallas grandes. El sabe que valor tomar depende los breakpoints que estan en la documentación -->
+        <!-- Small sm ≥576px 
+        Medium md ≥768px
+        Large lg ≥992px 
+        Extra large xl ≥1200px
+        Extra extra large xxl ≥1400px -->
+
+        <div class="col-3">Primera Columna</div>
+        <div class="col-9">Segunda Columna</div>
+      </div>
+    </div>
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
